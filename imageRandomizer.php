@@ -3,7 +3,7 @@
 /* =============================================================================
  * IMAGE RANDOMIZER
  * -----------------------------------------------------------------------------
- * version 1.1.0
+ * version 1.1.1
  * by MetalTxus (Jesus Miguel Cruz Cana)
  * https://github.com/jesuscc1993
  * ============================================================================= */
@@ -22,8 +22,6 @@ $GLOBALS['maxCachedTime'] = 60;
  * end of configuration
  * ============================================================================= */
 
-$img = "";
-$images = array();
 $GLOBALS['contentTypes'] = new stdClass();
 $GLOBALS['contentTypes']->gif = 'image/gif';
 $GLOBALS['contentTypes']->png = 'image/png';
