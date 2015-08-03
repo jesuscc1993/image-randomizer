@@ -3,7 +3,7 @@
 /* =============================================================================
  * IMAGE RANDOMIZER
  * -----------------------------------------------------------------------------
- * version 1.1.1
+ * version 1.1.2
  * by MetalTxus (Jesus Miguel Cruz Cana)
  * https://github.com/jesuscc1993
  * ============================================================================= */
@@ -16,7 +16,7 @@
 // Base path where the file will look for the images
 $GLOBALS['path'] = '.';
 // Time, in seconds, an image will be allowed to remain cached in the browser
-$GLOBALS['maxCachedTime'] = 60;
+$GLOBALS['maxCachedTime'] = 5;
 
 /* =============================================================================
  * end of configuration
@@ -80,8 +80,7 @@ function getFileContentType($file) {
 
 function setHeaders($img) {
     header('Content-type: ' . getFileContentType($img));
-    header('Cache-Control: max-age=' . $GLOBALS['maxCachedTime']);
-    header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + $GLOBALS['maxCachedTime']));
+    header('Cache-Control: no-cache, max-age=' . $GLOBALS['maxCachedTime']);
 }
 
 
